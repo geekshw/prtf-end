@@ -1,0 +1,816 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]>
+<!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>{{index.title}}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	
+	
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/skeleton.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/layout.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" />	
+	<link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/flat_filled_styles.css' %}"><!--SVG Animation Styles-->
+	<link rel="stylesheet" href="{% static 'css/retina.css' %}"/>
+	
+
+		
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+	
+	
+	
+</head>
+<body class="royal_loader">	
+	<!-- Primary Page Layout
+	================================================== -->
+
+	
+	
+		<div id="menu-wrap" class="menu-back cbp-af-header">
+			<div class="container">
+				<div class="sixteen columns">
+					<div class="logo">
+						<img src="{{index.logo.url}}" width="75px" height="75px" alt="Logo">
+					</div>
+					<ul class="slimmenu">
+						<li> 
+							<a class="scroll" href="#home">home</a>
+						</li>
+						<li>
+							<a class="scroll" href="#about">about</a>
+						</li>
+						<li>
+							<a class="scroll" href="#work">work</a>
+						</li>
+						<li> 
+							<a class="scroll" href="#services">services</a>
+						</li>
+						<li> 
+							<a class="scroll" href="#blog">jurnal</a>
+						</li>
+						<li>
+							<a class="scroll" href="#contact">contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>		
+
+			<div id="home">	
+				<div class="just_pattern"></div>
+				<div class="parallax-home"></div>	
+				<div class="small-text"><div class="cl-effect-5"><a class="scroll" href="#work"><span data-hover="portfolio">portfolio</span></a> <a class="scroll" href="#contact"><span data-hover="contact">contact</span></a></div></div>
+				<div class="social-top">
+					<ul class="list-social">
+						<li class="icon-soc tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
+							<a href="{{index.twitter}}">&#xf099;</a>
+						</li>
+						<li class="icon-soc tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
+							<a href="{{index.facebook}}">&#xf09a;</a>
+						</li>
+						<li class="icon-soc tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
+							<a href="{{index.github}}">&#xf09b;</a>
+						</li>
+						<li class="icon-soc tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
+							<a href="{{index.gmail}}">&#xf0d5;</a>
+						</li>
+					</ul>	
+				</div>	
+				<div class="big-text">
+					<ul class="flippy">
+						<li><span>{{index.title}}</span></li>
+					</ul>
+				</div>								
+				<a class="scroll" href="#about"><div class="scroll-btn tipped" data-title="about agency"  data-tipper-options='{"direction":"top","follow":"true"}'></div></a>
+			</div>
+
+			
+			<div id="about">
+				<div class="container">
+					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
+						<div class="header-text">
+							<div class="header-shadow-text"></div>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div id="about-what-we-do">
+					<div class="container">
+						<div class="one-third column" data-scrollreveal="enter left and move 150px over 1s">
+							<div class="icon-left1">&#xf0c6;</div>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+						</div>
+						<div class="one-third column" data-scrollreveal="enter bottom and move 150px over 1s">
+							<div class="icon-left1">&#xf080;</div>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+						</div>
+						<div class="one-third column" data-scrollreveal="enter right and move 150px over 1s">
+							<div class="icon-left1">&#xf120;</div>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+				</div>	
+				<div class="video-sections">
+					<div class="video-section-1">	
+						<div class="just_pattern"></div>
+						<video id="video_{%static 'background' %}" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="images/1.jpg"> 
+							<source src="{%static 'videos/video.webm' %}" type="video/webm"> 
+							<source src="{%static 'videos/video.mp4' %}" type="video/mp4"> 
+							<source src="{%static 'videos/video.ogg'%}" type="video/ogg"> 
+						</video>
+						<div class="text-over-video">A Day at the Office</div>	
+					</div>	
+					<div class="video-section-2">	
+						<div class="container">
+							<div class="nine columns padding-top-video-sec2" data-scrollreveal="enter right and move 150px over 1s">
+								<h1>{{ index.about_title }}</h1>
+								<p>{{ index.about_description }}</p>
+							</div>
+							<div class="clear"></div>
+							<div class="nine columns" data-scrollreveal="enter right and move 150px over 1s">
+								<h1>{{ index.about_title }}</h1>
+								<p>{{ index.about_description }}</p>
+							</div>
+							<div class="clear"></div>
+							<div class="nine columns" data-scrollreveal="enter right and move 150px over 1s">
+								<h1>{{ index.about_title }}</h1>
+								<p>{{ index.about_description }}</p>
+							</div>
+						</div>
+					</div>	
+				</div>	
+			</div>
+
+			
+			<div id="team">
+				<div class="container">
+					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
+						<div class="header-text">
+							<div class="header-shadow-text">the team</div>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+				</div>
+				<div class="container">	
+					<div class="four columns" data-scrollreveal="enter left and move 150px over 1s">
+						<div class="team-wrap">	
+							<img src="{% static 'images/team1.jpg' %}" alt=""/>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+							<div class="team-line"></div>
+							<div class="social-team">
+								<ul class="team-social">
+									<li class="icon-team tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf099;</a>
+									</li>
+									<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf09a;</a>
+									</li>
+									<li class="icon-team tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf09b;</a>
+									</li>
+									<li class="icon-team tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf0d5;</a>
+									</li>
+								</ul>	
+							</div>								
+						</div>
+					</div>	
+					<div class="four columns" data-scrollreveal="enter left and move 150px over 1s">	
+						<div class="team-wrap">	
+							<img src="{% static 'images/team2.jpg' %}" alt=""/>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+							<div class="team-line"></div>
+							<div class="social-team">
+								<ul class="team-social">
+									<li class="icon-team tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf099;</a>
+									</li>
+									<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf09a;</a>
+									</li>
+									<li class="icon-team tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf09b;</a>
+									</li>
+									<li class="icon-team tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf0d5;</a>
+									</li>
+								</ul>	
+							</div>
+						</div>
+					</div>	
+					<div class="four columns" data-scrollreveal="enter right and move 150px over 1s">	
+						<div class="team-wrap">	
+							<img src="{% static 'images/team3.jpg' %}" alt=""/>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+							<div class="team-line"></div>
+							<div class="social-team">
+								<ul class="team-social">
+									<li class="icon-team tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf099;</a>
+									</li>
+									<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf09a;</a>
+									</li>
+									<li class="icon-team tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf09b;</a>
+									</li>
+									<li class="icon-team tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf0d5;</a>
+									</li>
+								</ul>	
+							</div>
+						</div>
+					</div>	
+					<div class="four columns" data-scrollreveal="enter right and move 150px over 1s">	
+						<div class="team-wrap">	
+							<img src="{% static 'images/team4.jpg' %}" alt=""/>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+							<div class="team-line"></div>
+							<div class="social-team">
+								<ul class="team-social">
+									<li class="icon-team tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf099;</a>
+									</li>
+									<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf09a;</a>
+									</li>
+									<li class="icon-team tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf09b;</a>
+									</li>
+									<li class="icon-team tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
+										<a href="#">&#xf0d5;</a>
+									</li>
+								</ul>	
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>			
+			
+			
+			<div id="sep1">	
+				<div class="just_pattern"></div>
+				<div class="parallax"></div>
+						<div class="slideshow" id="slideshow">
+							<ol class="slides">
+								<li class="current">
+									<div class="description">
+										<img src="{% static 'images/team2.jpg' %}" alt=""/>
+										<h1>{{ index.about_title }}</h1>
+										<p>{{ index.about_description }}</p>
+									</div>
+									<div class="tiltview col">
+										<a href="#"><img src="{% static 'images/1_screen.jpg' %}" alt=""/></a>
+										<a href="#"><img src="{% static 'images/2_screen.jpg' %}" alt=""/></a>
+									</div>
+								</li>
+								<li>
+									<div class="description">
+										<h1>{{ index.about_title }}</h1>
+										<p>{{ index.about_description }}</p>
+									</div>
+									<div class="tiltview row">
+										<a href="#"><img src="{% static 'images/3_mobile.jpg' % }" alt=""/></a>
+										<a href="#"><img src="{% static 'images/4_mobile.jpg' % }" alt=""/></a>
+									</div>
+								</li>
+								<li>
+									<div class="description">
+										<h1>{{ index.about_title }}</h1>
+										<p>{{ index.about_description }}</p>
+									</div>
+									<div class="tiltview col">
+										<a href="#"><img src="{% static 'images/5_screen.jpg' %}" alt=""/></a>
+										<a href="#"><img src="{% static 'images/6_screen.jpg' %}" alt=""/></a>
+									</div>
+								</li>
+								<li>
+									<div class="description">
+										<h1>{{ index.about_title }}</h1>
+										<p>{{ index.about_description }}</p>
+									</div>
+									<div class="tiltview row">
+										<a href="#"><img src="{% static 'images/1_mobile.jpg' % }" alt=""/></a>
+										<a href="#"><img src="{% static 'images/2_mobile.jpg' % }" alt=""/></a>
+									</div>
+								</li>
+								<li>
+									<div class="description">
+										<h1>{{ index.about_title }}</h1>
+										<p>{{ index.about_description }}</p>
+									</div>
+									<div class="tiltview col">
+										<a href="#"><img src="{% static 'images/3_screen.jpg'%}" alt=""/></a>
+										<a href="#"><img src="{% static 'images/4_screen.jpg'%}" alt=""/></a>
+									</div>
+								</li>
+								<li>
+									<div class="description">
+										<h1>{{ index.about_title }}</h1>
+										<p>{{ index.about_description }}</p>
+									</div>
+									<div class="tiltview row">
+										<a href="#"><img src="{% static 'images/5_mobile.jpg' % }" alt=""/></a>
+										<a href="#"><img src="{% static 'images/6_mobile.jpg' % }" alt=""/></a>
+									</div>
+								</li>
+							</ol>
+						</div><!-- /slideshow -->		
+			</div>			
+			
+			
+			<div id="work">	
+				<div class="container">
+					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
+						<div class="header-text">
+							<div class="header-shadow-text">work</div>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="clear"></div>
+				<div class="portfolio"></div>
+
+
+				<div class="expander-wrap relative">
+					<div id="expander-wrap">
+						<p class="cls-btn"><a class="close">X</a></p>
+						<div class="expander-inner"></div>
+					</div>
+				</div>
+
+			
+				<div class="clear"></div>			
+				<div class="container">
+					<div class="sixteen columns">
+						<div id="portfolio-filter">
+							<ul id="filter">
+								<li><a href="#" class="current" data-filter="*" title="">Show all</a></li>
+								<li><a href="#" data-filter=".photography" title="">photography</a></li>
+								<li><a href="#" data-filter=".illustration1" title="">illustration</a></li>
+								<li><a href="#" data-filter=".motion-graphics" title="">motion graphics</a></li>
+								<li><a href="#" data-filter=".web-design" title="">web design</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="portfolio-wrap">
+					<li class="portfolio-box photography web-design">	
+						<a class="expander" href="project2.html" title="">
+							<img  src="images/gallery/1.jpg" alt="" />	
+							<div class="mask"></div>
+							<h4>{{ index.about_title }}</h4>
+						</a>	
+						<a class="fancybox-effects-d" href="images/gallery/1.jpg" title="">
+							<div class="fancybox-button">&#xf106;</div>
+						</a>	
+					</li>
+					<li class="portfolio-box illustration1 motion-graphics">	
+						<a class="expander" href="project1.html" title="">
+							<img  src="images/gallery/2.jpg" alt="" />
+							<div class="mask"></div>	
+							<h4>{{ index.about_title }}</h4>
+						</a>	
+						<a class="fancybox-effects-d" href="images/gallery/2.jpg" title="">
+							<div class="fancybox-button">&#xf106;</div>
+						</a>		
+					</li>		
+					<li class="portfolio-box motion-graphics photography">	
+						<a class="expander" href="project3.html" title="">
+							<img  src="images/gallery/3.jpg" alt="" />
+							<div class="mask"></div>
+							<h4>{{ index.about_title }}</h4>
+						</a>	
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/3.jpg' %}" title="">
+							<div class="fancybox-button">&#xf106;</div>
+						</a>				
+					</li>	
+					<li class="portfolio-box web-design illustration1">
+						<a class="expander" href="project4.html" title="">
+							<img  src="{% static 'images/gallery/4.jpg' %}" alt="" />
+							<div class="mask"></div>
+							<h4>{{ index.about_title }}</h4>
+						</a>	
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/4.jpg' %}" title="">
+							<div class="fancybox-button">&#xf106;</div>
+						</a> 			
+					</li>	
+					<li class="portfolio-box photography web-design">	
+						<a class="expander" href="project2.html" title="">
+							<img  src="{% static 'images/gallery/5.jpg' %}" alt="" />	
+							<div class="mask"></div>	
+							<h4>{{ index.about_title }}</h4>
+						</a>	
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/5.jpg' %}" title="">
+							<div class="fancybox-button">&#xf106;</div>
+						</a>			
+					</li>
+					<li class="portfolio-box illustration1 motion-graphics">	
+						<a class="expander" href="project1.html" title="">
+							<img  src="{% static 'images/gallery/6.jpg' %}" alt="" />
+							<div class="mask"></div>
+							<h4>{{ index.about_title }}</h4>
+						</a>		
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/6.jpg' %}" title="">
+							<div class="fancybox-button">&#xf106;</div>
+						</a>		
+					</li>	
+					<li class="portfolio-box motion-graphics photography">
+						<a class="expander" href="project3.html" title="">
+							<img  src="{% static 'images/gallery/7.jpg' %}" alt="" />	
+							<div class="mask"></div>
+							<h4>{{ index.about_title }}</h4>
+						</a>	
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/7.jpg' %}" title="">
+							<div class="fancybox-button">&#xf106;</div>
+						</a>			
+					</li>	
+					<li class="portfolio-box web-design illustration1">
+						<a class="expander" href="project4.html" title="">
+							<img  src="{% static 'images/gallery/8.jpg' %}" alt="" />	
+							<div class="mask"></div>
+							<h4>{{ index.about_title }}</h4>
+						</a>	
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/8.jpg' %}" title="">
+							<div class="fancybox-button">&#xf106;</div>
+						</a>			
+					</li>		
+				</ul>
+				<div class="clear"></div>
+				<div id="link-work">	
+					<div class="container">
+						<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
+							<h6>{{ index.about_title }}</h6>
+							<div class="cl-effect-5"><a class="scroll" href="#contact"><span data-hover="contact us">get in touch</span></a></div>
+						</div>
+					</div>		
+				</div>	
+			</div>				
+
+
+			<div id="sep2">	
+				<div class="just_pattern"></div>
+				<div class="parallax2"></div>	
+				<div class="container z-index">
+					<div class="four columns">
+						<div class="facts-wrap">
+							<div class="facts-wrap-num"><span class="counter">87</span></div>
+							<h5>Clients</h5> 
+						</div>
+					</div>
+					<div class="four columns">
+						<div class="facts-wrap">
+							<div class="facts-wrap-num"><span class="counter">25</span></div>
+							<h5>Awards</h5> 
+						</div>
+					</div>
+					<div class="four columns">
+						<div class="facts-wrap">
+							<div class="facts-wrap-num"><span class="counter">68</span></div>
+							<h5>Projects</h5> 
+						</div>
+					</div>
+					<div class="four columns">
+						<div class="facts-wrap">
+							<div class="facts-wrap-num"><span class="counter">46</span></div>
+							<h5>Mails</h5> 
+						</div>
+					</div>
+				</div>						
+			</div>
+
+
+
+			
+			
+			<div id="services">	
+				<div class="container">
+					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
+						<div class="header-text">
+							<div class="header-shadow-text">services</div>
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="one-third column" data-scrollreveal="enter left and move 150px over 1s">
+						<div class="services-offer">
+							<span class="svg-icon flat-filled" id="filled-brush"></span>
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+					<div class="one-third column" data-scrollreveal="enter bottom and move 150px over 1s">
+						<div class="services-offer">
+							<span class="svg-icon flat-filled" id="filled-phone"></span>
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+					<div class="one-third column" data-scrollreveal="enter right and move 150px over 1s">
+						<div class="services-offer">
+							<span class="svg-icon flat-filled" id="filled-message"></span>
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="one-third column" data-scrollreveal="enter left and move 150px over 1s">
+						<div class="services-offer">
+							<span class="svg-icon flat-filled" id="filled-clock"></span>
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+					<div class="one-third column" data-scrollreveal="enter bottom and move 150px over 1s">
+						<div class="services-offer">
+							<span class="svg-icon flat-filled" id="filled-email"></span>
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+					<div class="one-third column" data-scrollreveal="enter right and move 150px over 1s">
+						<div class="services-offer">
+							<span class="svg-icon flat-filled" id="filled-heart"></span>
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>							
+			<div id="plans">	
+				<div class="container">
+					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
+						<div class="header-text">
+							<div class="header-shadow-text">our plans</div>
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>	
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="one-third column" data-scrollreveal="enter left and move 150px over 1s">
+						<div class="plans-offer">
+							<h3>$9.99<span> – month</span></h3>
+							<h6>Standard</h6>
+							<p><strong>24/7</strong> TECH SUPPORT</p>
+							<p><strong>15</strong> PROJECTS</p>
+							<p><strong>5GB</strong> STORAGE</p>
+							<p>UNLIMITED USERS</p>
+							<div class="cl-effect-5"><a href="#"><span data-hover="sing up">sing up</span></a></div>
+						</div>
+					</div>
+					<div class="one-third column" data-scrollreveal="enter bottom and move 150px over 1s">
+						<div class="plans-offer-gold">
+							<h3>$17.99<span> – month</span></h3>
+							<h6>Gold</h6>
+							<p><strong>24/7</strong> TECH SUPPORT</p>
+							<p><strong>25</strong> PROJECTS</p>
+							<p><strong>15GB</strong> STORAGE</p>
+							<p>UNLIMITED USERS</p>
+							<div class="cl-effect-5"><a href="#"><span data-hover="sing up">sing up</span></a></div>
+						</div>
+					</div>
+					<div class="one-third column" data-scrollreveal="enter right and move 150px over 1s">
+						<div class="plans-offer">
+							<h3>$34.99<span> – month</span></h3>
+							<h6>Premium</h6>
+							<p><strong>24/7</strong> TECH SUPPORT</p>
+							<p><strong>100</strong> PROJECTS</p>
+							<p><strong>50GB</strong> STORAGE</p>
+							<p>UNLIMITED USERS</p>
+							<div class="cl-effect-5"><a href="#"><span data-hover="sing up">sing up</span></a></div>
+						</div>
+					</div>
+				</div>	
+			</div>
+
+			<div id="logos">
+				<div class="container">	
+					<div class="sixteen columns">
+						<div class="logos-wrap">
+							<img  src="{% static 'images/logos/1.png' %}" alt="" />	
+						</div>
+						<div class="logos-wrap">
+							<img  src="{% static 'images/logos/2.png' %}" alt="" />	
+						</div>	
+						<div class="logos-wrap">
+							<img  src="{% static 'images/logos/3.png' %}" alt="" />	
+						</div>	
+						<div class="logos-wrap">
+							<img  src="{% static 'images/logos/4.png' %}" alt="" />	
+						</div>	
+						<div class="logos-wrap">
+							<img  src="{% static 'images/logos/5.png' %}" alt="" />	
+						</div>	
+						<div class="logos-wrap">
+							<img  src="{% static 'images/logos/2.png' %}" alt="" />	
+						</div>		
+					</div>
+				</div>		
+			</div>		
+
+
+			<div id="blog">	
+				<div class="just_pattern"></div>
+				<div class="parallax1"></div>
+				<div class="container z-index">	
+					<div class="one-third column">
+						<div class="blog-post">
+							<img  src="images/blog/1.jpg" alt="" />
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>	
+							<p><span>26.2.2014.</span><span> 3 comments</span></p>
+						</div>
+					</div>	
+					<div class="one-third column">
+						<div class="blog-post">
+							<img  src="images/blog/2.jpg" alt="" />
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>	
+							<p><span>17.2.2014.</span><span> 7 comments</span></p>
+						</div>
+					</div>	
+					<div class="one-third column">
+						<div class="blog-post">
+							<img  src="images/blog/3.jpg" alt="" />
+							<h5>{{ index.about_title }}</h5>
+							<p>{{ index.about_description }}</p>	
+							<p><span>12.2.2014.</span><span> 4 comments</span></p>
+						</div>
+					</div>
+				</div>		
+			</div>			
+			
+			
+			
+			
+			
+			
+			<div id="contact">	
+				<div class="container">
+					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
+						<div class="header-text">
+							<div class="header-shadow-text">contact</div>
+							<h1>{{ index.about_title }}</h1>
+							<p>{{ index.about_description }}</p>
+						</div>
+					</div>
+				</div>
+				<div class="container">	
+					<form name="ajax-form" id="ajax-form" action="mail-it.php" method="post">
+						<div class="four columns">
+							<label for="name">Your Name: * 
+								<span class="error" id="err-name">please enter name</span>
+							</label>
+							<input name="name" id="name" type="text" />
+						</div>
+						<div class="four columns">
+							<label for="email">E-Mail: * 
+								<span class="error" id="err-email">please enter e-mail</span>
+								<span class="error" id="err-emailvld">e-mail is not a valid format</span>
+							</label>
+							<input name="email" id="email" type="text" />
+						</div>
+						<div class="five columns">
+							<label for="message">Tell Us Everything:</label>
+							<textarea name="message" id="message"></textarea>
+						</div>
+						<div class="three columns">
+							<div id="button-con"><button class="send_message" id="send">Submit</button></div>
+						</div>
+						<div class="clear"></div>	
+						<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
+						<div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
+						<div class="error" id="err-state"></div>
+					</form>	
+					<div class="clear"></div>
+					<div id="ajaxsuccess">Successfully sent!!</div>	
+					<div class="clear"></div>
+					<div class="eight columns" data-scrollreveal="enter left and move 150px over 1s">
+						<div class="contact-wrap">
+							<p><i class="icon-contact1">&#xf095;</i><span>call us:</span> (381) 267-6386 <small><em>Monday–Friday | 9am–5pm (GMT +1)</em></small></p>
+						</div>
+					</div>
+					<div class="eight columns" data-scrollreveal="enter right and move 150px over 1s">	
+						<div class="contact-wrap">
+							<p><i class="icon-contact1">&#xf041;</i><span>Visit Us:</span> First Street, Sunrise Avenue, New York, USA</p>	
+						</div>
+					</div>	
+					<div class="sixteen columns" data-scrollreveal="enter bottom and move 150px over 1s">	
+						<a class="button-map close-map"><span>Locate Us on Map</span></a>
+					</div>
+				</div>
+				<div id="google_map"></div>				
+			</div>
+			
+
+
+			
+			<div id="footer">
+				<a class="scroll" href="#home"><div class="back-top">&#xf102;</div></a>	
+				<div class="container">
+					<div class="sixteen columns">
+						<p>Made with<i class="icon-footer">&#xf004;</i>and<i class="icon-footer">&#xf0f4;</i>in serbia</p>
+						<p><small>Template: Ananke by ig design</small></p>
+					</div>
+				</div>	
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	
+   
+
+
+	
+	<!-- JAVASCRIPT
+    ================================================== -->
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script>	 
+<script type="text/javascript" src="{% static 'js/royal_preloader.min.js' %}"></script>
+<script type="text/javascript">
+(function($) { "use strict";
+            Royal_Preloader.config({
+                mode:           'text', // 'number', "text" or "logo"
+                text:           'Ananke',
+                timeout:        0,
+                showInfo:       true,
+                opacity:        1,
+                background:     ['#FFFFFF']
+            });
+})(jQuery);
+</script>
+<script type="text/javascript" src="{% static 'js/classie.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/cbpAnimatedHeader.min.js' %}"></script>
+<script type="text/javascript">
+(function($) { "use strict";
+   var pos = 0;
+
+    window.setInterval(function(){
+      pos++;
+      document.getElementsByClassName('parallax-home')[0].style.backgroundPosition = pos + "px 0px";
+    }, 40);
+})(jQuery);
+</script>
+<script type="text/javascript" src="{% static 'js/retina-1.1.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.easing.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/flippy.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.fitvids.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/tiltSlider.js' %}"></script>
+<script>
+(function($) { "use strict";
+	new TiltSlider( document.getElementById( 'slideshow' ) );
+})(jQuery);
+</script>
+<script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.localscroll-1.2.7-min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.scrollTo-1.4.2-min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.fancybox.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/svg_inject_flat_icons_filled.js' %}"></script><!--Inject SVG and Toggle CSS Styles-->
+<script type="text/javascript" src="{% static 'js/contact.js' %}"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/template.js' %}"></script>  	  
+<!-- End Document
+================================================== -->
+</body>
+</html>
